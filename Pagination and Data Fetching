@@ -1,0 +1,3 @@
+In the code above, pagination is handled via the PageRequest.of(page, size) method in the findAll() call. The response will automatically handle pagination and return results accordingly.
+
+For GET /api/products/{id}, we are using lazy loading to populate the category data. If you want to force the loading of the associated Category entity, you can use @ManyToOne(fetch = FetchType.LAZY) in the Product entity and ensure that the category is loaded when accessing the product.
